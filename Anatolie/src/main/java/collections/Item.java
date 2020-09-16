@@ -12,4 +12,9 @@ public class Item {
         this.title = title;
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" + "id=" + id + ", title='" + title + '\'' + ", type=" + type + '}';
+    }
 }
