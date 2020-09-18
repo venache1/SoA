@@ -1,7 +1,5 @@
 package collections;
 
-import com.oracle.xmlns.internal.webservices.jaxws_databinding.SoapBindingParameterStyle;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
