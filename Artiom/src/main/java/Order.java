@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -15,14 +16,13 @@ public class Order {
         this.items = items;
     }
 
-
-    public boolean contains(Type clothes) {
+    public List<Item> containsClothes() {
+        List<Item> tmpItems = new ArrayList<>();
         for (Item item : this.items) {
             if (item.getType() == Type.CLOTHES) {
-                return true;
+                tmpItems.add(item);
             }
-            return false;
         }
-        return false;
+        return tmpItems;
     }
 }

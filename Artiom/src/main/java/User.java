@@ -1,4 +1,6 @@
 import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -14,16 +16,13 @@ public class User {
         this.addresses = addresses;
     }
 
-    public boolean contains(String chisinau) {
-        for (Address city : this.addresses.values()) {
-            if (city.getCity().equals("Chisinau")) {
-                return true;
+    public List<Address> containsAdresses() {
+        List<Address> tmpAdresses = new ArrayList<>();
+        for (Address address : this.addresses.values()) {
+            if (address.getCity().equals("Chisinau")) {
+                tmpAdresses.add(address);
             }
-            return false;
         }
-        return false;
+        return tmpAdresses;
     }
 }
-
-
-

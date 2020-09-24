@@ -44,16 +44,13 @@ public class Retailer {
         users.add(firstUser);
         users.add(secondUser);
         users.add(thirdUser);
-
     }
 
     //Create method to filter orders by CLOTHES type
     public static List<Order> filterOrdersByType(List<Order> orders, Type type) {
         List<Order> filteredOrders = new ArrayList<>();
         for (Order filteredOrder : orders) {
-            if (filteredOrder.contains(Type.CLOTHES)) {
-                filteredOrders.add((Order) orders);
-            }
+            filteredOrder.containsClothes();
         }
         return filteredOrders;
     }
@@ -62,11 +59,8 @@ public class Retailer {
     public static List<User> filterUsersByCity(List<User> users, String city) {
         List<User> filteredUsers = new ArrayList<>();
         for (User filteredUser : users) {
-            if (filteredUser.contains("Chisinau")) {
-                filteredUsers.add((User) users);
-            }
+            filteredUser.containsAdresses();
         }
         return filteredUsers;
     }
 }
-

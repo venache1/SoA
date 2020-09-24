@@ -16,7 +16,4 @@ public class Address {
     public String getFullAddress() {
         return country + ", " + city + ", " + street;
     }
-
-
 }
-
